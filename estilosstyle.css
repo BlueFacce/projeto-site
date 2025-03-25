@@ -12,14 +12,15 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto dentro do contêiner */
 }
 
 h1 {
-    text-align: center;
+    margin-bottom: 20px; /* Espaçamento inferior para separar do conteúdo */
 }
 
 input[type="number"] {
-    width: 100%;
+    width: 80%; /* Ajusta a largura do input */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -27,13 +28,14 @@ input[type="number"] {
 }
 
 button {
-    width: 100%;
+    width: 80%; /* Ajusta a largura do botão */
     padding: 10px;
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 20px; /* Espaçamento inferior para separar do conteúdo */
 }
 
 button:hover {
@@ -42,4 +44,11 @@ button:hover {
 
 h2 {
     margin-top: 20px;
+    margin-bottom: 10px; /* Espaçamento inferior para separar do parágrafo */
+}
+
+p {
+    margin: 10px 0; /* Espaçamento entre parágrafos */
+    line-height: 1.5; /* Aumenta a altura da linha para melhor legibilidade */
+    padding: 0 20px; /* Adiciona padding lateral para evitar que o texto fique colado nas bordas */
 }
