@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilosstyle.css">
-    <title>Curso em Vídeo</title>
+    <title>Conversor de Números</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Título do Site</h1>
-        </header>
-        <article>
-            <h2>Artigo 001</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ipsa sequi perspiciatis corporis dolores, praesentium voluptate et deleniti inventore rerum voluptas ipsum possimus tenetur. Necessitatibus rem totam accusamus earum repellat?</p>
-        </article>
-        <article>
-            <h2>Artigo 002</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet error perferendis a magni tempore quasi quibusdam voluptatum voluptates alias, quo necessitatibus fugit. Voluptas molestias illum id, totam dolor modi expedita!</p>
-        </article>
-    </main>
-    
+    <div class="container">
+        <h1>Conversor de Números</h1>
+        <p>Este site converte números decimais em binários e hexadecimais.</p>
+        
+        <input type="number" id="decimalInput" placeholder="Digite um número decimal" />
+        <button onclick="converter()">Converter</button>
+
+        <h2>Resultados:</h2>
+        <p id="resultadoBinario"></p>
+        <p id="resultadoHexadecimal"></p>
+
+        <h2>Sobre Números Binários e Hexadecimais</h2>
+        <p>
+            Os números binários são usados em computação e eletrônica digital, representando dados em forma de 0s e 1s. 
+            Já os números hexadecimais são uma representação mais compacta dos números binários, utilizando 16 símbolos (0-9 e A-F).
+        </p>
+    </div>
+
+    <script>
+        function converter() {
+            const decimal = parseInt(document.getElementById('decimalInput').value);
+            if (isNaN(decimal)) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+            const binario = decimal.toString(2);
+            const hexadecimal = decimal.toString(16).toUpperCase();
+            document.getElementById('resultadoBinario').innerText = `Binário: ${binario}`;
+            document.getElementById('resultadoHexadecimal').innerText = `Hexadecimal: ${hexadecimal}`;
+        }
+    </script>
 </body>
 </html>
