@@ -4,38 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Números</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilosstyle.css">
 </head>
 <body>
     <div class="container">
         <h1>Conversor de Números</h1>
-        <p>Este site converte números decimais em binários e hexadecimais.</p>
+        <p>Converta números decimais para binário e hexadecimal de forma rápida.</p>
         
-        <input type="number" id="decimalInput" placeholder="Digite um número decimal" />
+        <input type="number" id="decimalInput" placeholder="Digite um número decimal...">
         <button onclick="converter()">Converter</button>
 
-        <h2>Resultados:</h2>
-        <p id="resultadoBinario"></p>
-        <p id="resultadoHexadecimal"></p>
+        <div class="resultados">
+            <h2>Resultados:</h2>
+            <p id="resultadoBinario">Binário: --</p>
+            <p id="resultadoHexadecimal">Hexadecimal: --</p>
+        </div>
 
-        <h2>Sobre Números Binários e Hexadecimais</h2>
-        <p>
-            Os números binários são usados em computação e eletrônica digital, representando dados em forma de 0s e 1s.<br> 
-            Já os números hexadecimais são uma representação mais compacta dos números binários, utilizando 16 símbolos (0-9 e A-F).
-        </p>
+        <div class="info">
+            <h2>O que são números binários e hexadecimais?</h2>
+            <p>
+                Os números binários são a base dos computadores, representando dados apenas com os dígitos 0 e 1. 
+                Cada bit representa uma potência de 2, e um conjunto de 8 bits forma um byte, usado para armazenar dados.
+            </p>
+            <p>
+                O sistema hexadecimal é utilizado para representar valores binários de forma mais compacta. Ele usa 16 símbolos: 
+                0-9 e A-F, sendo muito comum na programação, como na definição de cores em CSS e na manipulação de endereços de memória.
+            </p>
+            <p>
+                Exemplo de conversão:
+                <br>Decimal: <strong>255</strong> → Binário: <strong>11111111</strong> → Hexadecimal: <strong>FF</strong>
+            </p>
+        </div>
     </div>
 
     <script>
         function converter() {
             const decimal = parseInt(document.getElementById('decimalInput').value);
+            const resultadoBinario = document.getElementById('resultadoBinario');
+            const resultadoHexadecimal = document.getElementById('resultadoHexadecimal');
+
             if (isNaN(decimal)) {
-                alert("Por favor, insira um número válido.");
+                resultadoBinario.innerText = "Insira um número válido.";
+                resultadoHexadecimal.innerText = "";
                 return;
             }
-            const binario = decimal.toString(2);
-            const hexadecimal = decimal.toString(16).toUpperCase();
-            document.getElementById('resultadoBinario').innerText = `Binário: ${binario}`;
-            document.getElementById('resultadoHexadecimal').innerText = `Hexadecimal: ${hexadecimal}`;
+
+            resultadoBinario.innerText = `Binário: ${decimal.toString(2)}`;
+            resultadoHexadecimal.innerText = `Hexadecimal: ${decimal.toString(16).toUpperCase()}`;
         }
     </script>
 </body>
