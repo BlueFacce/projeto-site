@@ -1,51 +1,64 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e2f;
+    color: #ffffff;
     margin: 0;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centraliza o texto dentro do contêiner */
+    max-width: 500px;
+    background: #2a2a3c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 h1 {
-    margin-bottom: 20px; /* Espaçamento inferior para separar do conteúdo */
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #62d2a2;
 }
 
 input[type="number"] {
-    width: 80%; /* Ajusta a largura do input */
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #3a3a4f;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
 }
 
 button {
-    width: 80%; /* Ajusta a largura do botão */
-    padding: 10px;
-    background-color: #28a745;
+    width: 100%;
+    padding: 12px;
+    background-color: #62d2a2;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #50b88d;
 }
 
 h2 {
     margin-top: 20px;
-    margin-bottom: 10px; /* Espaçamento inferior para separar do parágrafo */
+    font-size: 20px;
+    color: #62d2a2;
 }
 
 p {
-    margin: 10px 0; /* Espaçamento entre parágrafos */
+    font-size: 16px;
 }
